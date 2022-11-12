@@ -15,14 +15,12 @@ const images = [
 
 const galleryEl = document.querySelector('.gallery');
 
-console.log(makeGallery(images));
-
-galleryEl.insertAdjacentHTML('afterend', makeGallery(images));
+galleryEl.innerHTML = makeGallery(images);
 
 function makeGallery(items) {
 	let elements = '';
 
-	images.forEach(item => {
+	items.forEach(item => {
 		elements += makeGalleryElement(item);
 	});
 
@@ -30,5 +28,5 @@ function makeGallery(items) {
 }
 
 function makeGalleryElement({ url, alt }) {
-	return `<img href="${url}" alt="${alt}">`;
+	return `<li class="gallery_item"><img src="${url}" alt="${alt}"></li>`;
 }

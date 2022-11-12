@@ -24,10 +24,19 @@ button {
 }
 
 img{
+  display: block;
+  width: 100%;
 
 }
 
 .gallery{
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+
+  list-style: none;
+}
+
+.gallery_item{
+  width: calc((100% / 2 ) - 20px);
 }

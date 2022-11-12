@@ -15,7 +15,7 @@ const images = [
 
 const galleryEl = document.querySelector('.gallery');
 
-galleryEl.innerHTML = makeGallery(images);
+galleryEl.insertAdjacentHTML('afterbegin', makeGallery(images));
 
 function makeGallery(items) {
 	let elements = '';

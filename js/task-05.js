@@ -3,9 +3,9 @@ const refs = {
 	output: document.querySelector('#name-output'),
 };
 
-refs.input.addEventListener('input', writeValue);
+refs.input.addEventListener('input', onInputValue);
 
-function writeValue(event) {
+function onInputValue(event) {
 	refs.output.textContent =
 		event.target.value.length > 0 ? event.target.value : 'Anonymous';
 }

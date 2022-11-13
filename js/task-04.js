@@ -5,15 +5,15 @@ const refs = {
 	value: document.querySelector('#value'),
 };
 
-refs.btnIncrement.addEventListener('click', increment);
-refs.btnDecrement.addEventListener('click', decrement);
+refs.btnIncrement.addEventListener('click', onClickIncrement);
+refs.btnDecrement.addEventListener('click', onClickDecrement);
 
-function increment() {
+function onClickIncrement() {
 	counterValue += 1;
 	refs.value.textContent = counterValue;
 }
 
-function decrement() {
+function onClickDecrement() {
 	counterValue -= 1;
 	refs.value.textContent = counterValue;
 }

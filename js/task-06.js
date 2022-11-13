@@ -1,9 +1,9 @@
 const inputRef = document.querySelector('#validation-input');
 console.log(inputRef.dataset.length);
 
-inputRef.addEventListener('blur', validation);
+inputRef.addEventListener('blur', onBlurValidation);
 
-function validation(event) {
+function onBlurValidation(event) {
 	if (
 		Number.parseInt(event.currentTarget.dataset.length) ===
 		event.currentTarget.value.length

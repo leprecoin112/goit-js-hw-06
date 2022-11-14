@@ -5,10 +5,13 @@ formEl.addEventListener('submit', onSubmitAuth);
 function onSubmitAuth(event) {
 	event.preventDefault();
 
-	const email = event.currentTarget.email.value;
-	const password = event.currentTarget.password.value;
+	const {
+		elements: { email, password },
+	} = event.currentTarget;
 
-	email === '' || password === '' ? alertShow() : sendForm(event.currentTarget);
+	email.value === '' || password.value === ''
+		? alertShow()
+		: sendForm(event.currentTarget);
 }
 
 function alertShow() {
@@ -23,5 +26,5 @@ function sendForm(form) {
 	});
 
 	console.log(data);
-	event.currentTarget.reset();
+	form.reset();
 }

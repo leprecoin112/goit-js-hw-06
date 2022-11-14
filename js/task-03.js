@@ -18,13 +18,7 @@ const galleryEl = document.querySelector('.gallery');
 galleryEl.insertAdjacentHTML('afterbegin', makeGallery(images));
 
 function makeGallery(items) {
-	let elements = '';
-
-	items.forEach(item => {
-		elements += makeGalleryElement(item);
-	});
-
-	return elements;
+	return items.map(item => makeGalleryElement(item)).join('');
 }
 
 function makeGalleryElement({ url, alt }) {
